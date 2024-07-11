@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:farm_orchard_management_dashboard/features/dash_board/data/model/login_response_body.dart';
+import 'package:farm_orchard_management_dashboard/features/login/data/model/login_response_body.dart';
 import 'package:retrofit/retrofit.dart';
 import 'api_constants.dart';
 
