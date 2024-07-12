@@ -22,7 +22,7 @@ class _ApiService implements ApiService {
   String? baseUrl;
 
   @override
-  Future<LoginResponseBody> login(LoginResponseBody loginRequestBody) async {
+  Future<LoginResponseBody> login(LoginRequestBody loginRequestBody) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
