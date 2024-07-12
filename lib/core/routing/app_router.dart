@@ -1,6 +1,4 @@
-import 'package:dio/dio.dart';
-import 'package:farm_orchard_management_dashboard/core/networking/api_service.dart';
-import 'package:farm_orchard_management_dashboard/features/dash_board/data/repo/login_repo.dart';
+import 'package:farm_orchard_management_dashboard/core/dependency_injection.dart';
 import 'package:farm_orchard_management_dashboard/features/dash_board/view/dash_board.dart';
 import 'package:farm_orchard_management_dashboard/features/login/logic/cubit/login_cubit.dart';
 import 'package:farm_orchard_management_dashboard/features/login/view/login.dart';
@@ -15,7 +13,7 @@ class AppRouter {
       case RoutersName.login:
         return MaterialPageRoute(
           builder: (_) => BlocProvider(
-            create: (context) => LoginCubit(LoginRepo(ApiService(Dio()))),
+            create: (context) => getIt<LoginCubit>(),
             child: const Login(),
           ),
         );

@@ -3,8 +3,8 @@ part 'login_request_body.g.dart';
 
 @JsonSerializable()
 class LoginRequestBody {
-  final String username;
-  final String password;
+  String? username;
+  String? password;
 
   LoginRequestBody({required this.username, required this.password});
   factory LoginRequestBody.fromJson(Map<String, dynamic> json) =>

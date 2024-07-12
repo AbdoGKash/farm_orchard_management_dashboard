@@ -3,9 +3,9 @@ part 'login_response_body.g.dart';
 
 @JsonSerializable()
 class LoginResponseBody {
-  final bool success;
-  final String message;
-  final String permissions;
+  bool? success;
+  String? message;
+  String? permissions;
   LoginResponseBody(
       {required this.success,
       required this.message,

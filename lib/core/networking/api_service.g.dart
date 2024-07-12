@@ -14,7 +14,7 @@ class _ApiService implements ApiService {
     this.baseUrl,
   }) {
     baseUrl ??=
-        'http://192.168.1.3/farm_orchard_management_dashboard-backend-/';
+        'https://192.168.1.4/farm_orchard_management_dashboard-backend-/';
   }
 
   final Dio _dio;
@@ -36,7 +36,7 @@ class _ApiService implements ApiService {
     )
             .compose(
               _dio.options,
-              'login',
+              'login.php',
               queryParameters: queryParameters,
               data: _data,
             )

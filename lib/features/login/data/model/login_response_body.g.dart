@@ -8,9 +8,9 @@ part of 'login_response_body.dart';
 
 LoginResponseBody _$LoginResponseBodyFromJson(Map<String, dynamic> json) =>
     LoginResponseBody(
-      success: json['success'] as bool,
-      message: json['message'] as String,
-      permissions: json['permissions'] as String,
+      success: json['success'] as bool?,
+      message: json['message'] as String?,
+      permissions: json['permissions'] as String?,
     );
 
 Map<String, dynamic> _$LoginResponseBodyToJson(LoginResponseBody instance) =>
