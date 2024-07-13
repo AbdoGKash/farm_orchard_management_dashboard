@@ -7,4 +7,5 @@ class AppStrings {
   static const String rememberMe = 'Remember me';
   static const String login = 'Login';
   static const String privacyPolicyText = 'Term of use. Privacy policy';
+  static const String search = 'Search';
 }

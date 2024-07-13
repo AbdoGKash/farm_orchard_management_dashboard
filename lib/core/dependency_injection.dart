@@ -4,7 +4,7 @@ import 'package:dio/dio.dart';
 import 'package:dio/io.dart';
 import 'package:get_it/get_it.dart';
 
-import '../features/dash_board/data/repo/login_repo.dart';
+import '../features/login/data/repo/login_repo.dart';
 import '../features/login/logic/cubit/login_cubit.dart';
 import 'networking/api_service.dart';
 

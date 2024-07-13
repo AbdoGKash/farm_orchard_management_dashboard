@@ -22,6 +22,30 @@ class TextStyelManger {
     fontWeight: FontWeightManager.regular,
     color: ColorsManger.white.withOpacity(1),
   );
+  static TextStyle font15LighterGrey3Regular = TextStyle(
+    fontSize: 15.sp,
+    fontFamily: FontConstants.fontFamily,
+    fontWeight: FontWeightManager.regular,
+    color: ColorsManger.lighterGrey3.withOpacity(1),
+  );
+  static TextStyle font50WhiteRegular = TextStyle(
+    fontSize: 50.sp,
+    fontFamily: FontConstants.fontFamily,
+    fontWeight: FontWeightManager.regular,
+    color: ColorsManger.white.withOpacity(1),
+  );
+  static TextStyle font25WhiteRegular = TextStyle(
+    fontSize: 25.sp,
+    fontFamily: FontConstants.fontFamily,
+    fontWeight: FontWeightManager.regular,
+    color: ColorsManger.white.withOpacity(1),
+  );
+  static TextStyle font30WhiteRegular = TextStyle(
+    fontSize: 30.sp,
+    fontFamily: FontConstants.fontFamily,
+    fontWeight: FontWeightManager.regular,
+    color: ColorsManger.white.withOpacity(1),
+  );
 }
 
 class FontConstants {
