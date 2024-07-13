@@ -19,6 +19,10 @@ class LoginCubit extends Cubit<LoginState> {
         username: context.read<LoginCubit>().userNameController.text.toString(),
         password:
             context.read<LoginCubit>().passwordController.text.toString()));
-    emit(SuccessState(response));
+    if (response.success == true) {
+      emit(SuccessState(response));
+    } else {
+      emit(ErrorState());
+    }
   }
 }

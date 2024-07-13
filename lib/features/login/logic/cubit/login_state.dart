@@ -13,6 +13,5 @@ class SuccessState extends LoginState {
 }
 
 class ErrorState extends LoginState {
-  final String error;
-  ErrorState(this.error);
+  ErrorState();
 }
