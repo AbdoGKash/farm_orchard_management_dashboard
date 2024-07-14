@@ -13,7 +13,7 @@ class FarmOrchardManagementDashboard extends StatelessWidget {
       minTextAdapt: true,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: RoutersName.dashBoard,
+        initialRoute: RoutersName.login,
         onGenerateRoute: AppRouter.generateRoute,
       ),
     );

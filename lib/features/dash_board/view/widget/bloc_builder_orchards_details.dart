@@ -36,7 +36,6 @@ class BlocBuilderOrchardsDetails extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.only(top: 50, bottom: 20).w,
                   height: 490.w,
-                  // width: MediaQuery.sizeOf(context).width,
                   child: ListView.separated(
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
