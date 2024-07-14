@@ -16,6 +16,12 @@ class TextStyelManger {
     fontWeight: FontWeightManager.regular,
     color: ColorsManger.grey.withOpacity(1),
   );
+  static TextStyle font11GreyRegular = TextStyle(
+    fontSize: 11.sp,
+    fontFamily: FontConstants.fontFamily,
+    fontWeight: FontWeightManager.regular,
+    color: ColorsManger.grey.withOpacity(1),
+  );
   static TextStyle font20WhiteRegular = TextStyle(
     fontSize: 20.sp,
     fontFamily: FontConstants.fontFamily,

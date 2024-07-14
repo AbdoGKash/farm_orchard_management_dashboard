@@ -9,8 +9,8 @@ import '../../../../core/theming/color_manger.dart';
 import '../../data/model/orchards_response_body.dart';
 import '../../logic/cubit/orchards_cubit.dart';
 
-class OrchardsDetails extends StatelessWidget {
-  const OrchardsDetails({super.key});
+class BlocBuilderOrchardsDetails extends StatelessWidget {
+  const BlocBuilderOrchardsDetails({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -34,9 +34,9 @@ class OrchardsDetails extends StatelessWidget {
             child: Column(
               children: [
                 Container(
-                  padding: const EdgeInsets.only(top: 50).w,
-                  height: 450.w,
-                  width: MediaQuery.sizeOf(context).width,
+                  padding: const EdgeInsets.only(top: 50, bottom: 20).w,
+                  height: 490.w,
+                  // width: MediaQuery.sizeOf(context).width,
                   child: ListView.separated(
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
@@ -46,7 +46,7 @@ class OrchardsDetails extends StatelessWidget {
                         return Container(
                           width: 2.w,
                           height: 1.h,
-                          color: ColorsManger.lighterGrey4,
+                          color: ColorsManger.darkGrey2,
                         );
                       },
                       itemBuilder: (BuildContext context, int index) {
@@ -58,9 +58,6 @@ class OrchardsDetails extends StatelessWidget {
                           orchardsImages: orchardsImages[index],
                         );
                       }),
-                ),
-                SizedBox(
-                  height: 20.h,
                 ),
                 Divider(
                   thickness: 2,

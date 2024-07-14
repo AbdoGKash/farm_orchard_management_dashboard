@@ -3,7 +3,6 @@ import 'package:farm_orchard_management_dashboard/core/theming/color_manger.dart
 import 'package:farm_orchard_management_dashboard/core/theming/text_styel_manger.dart';
 import 'package:flutter/material.dart';
 
-// Refactor
 class ForgotPasswordAndRememberMe extends StatefulWidget {
   const ForgotPasswordAndRememberMe({super.key});
 

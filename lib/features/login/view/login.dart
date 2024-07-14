@@ -33,7 +33,7 @@ class Login extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(
-                height: 50.h,
+                height: 256.h,
               ),
               Text(
                 AppStrings.welcomeBackText,
@@ -63,7 +63,17 @@ class Login extends StatelessWidget {
               SizedBox(
                 height: 50.h,
               ),
-              const CustomTextButton(),
+              SizedBox(
+                height: 50.h,
+              ),
+              const CustomMaterialButton(),
+              SizedBox(
+                height: 180.h,
+              ),
+              Text(
+                AppStrings.privacyPolicyText,
+                style: TextStyelManger.font11GreyRegular,
+              ),
               const LoginCubitListner()
             ],
           ),

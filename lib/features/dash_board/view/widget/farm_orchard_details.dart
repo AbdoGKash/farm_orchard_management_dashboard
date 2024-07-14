@@ -29,7 +29,6 @@ class FarmOrchardDetails extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(30, 0, 30, 0).w,
       child: SizedBox(
         width: 660.w,
-        height: 400.h,
         child: Column(
           children: [
             Row(
@@ -120,6 +119,7 @@ class FarmOrchardDetails extends StatelessWidget {
                         Image.asset(
                           ImageAssets.size,
                           width: 45.w,
+                          height: 50.h,
                         ),
                         Text(
                           '$waterLevel mm',

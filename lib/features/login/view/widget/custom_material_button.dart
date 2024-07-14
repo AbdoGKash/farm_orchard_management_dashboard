@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class CustomTextButton extends StatelessWidget {
-  const CustomTextButton({super.key});
+class CustomMaterialButton extends StatelessWidget {
+  const CustomMaterialButton({super.key});
 
   @override
   Widget build(BuildContext context) {

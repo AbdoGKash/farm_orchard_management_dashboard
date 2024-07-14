@@ -11,10 +11,9 @@ class FarmOrchardManagementDashboard extends StatelessWidget {
     return const ScreenUtilInit(
       designSize: Size(1920, 1080),
       minTextAdapt: true,
-      splitScreenMode: true,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: RoutersName.login,
+        initialRoute: RoutersName.dashBoard,
         onGenerateRoute: AppRouter.generateRoute,
       ),
     );
