@@ -1,7 +1,5 @@
-import 'package:farm_orchard_management_dashboard/core/helper/image_assets_manger.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../core/theming/color_manger.dart';
 
@@ -11,8 +9,10 @@ class NotificationIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(children: [
-      SvgPicture.asset(
-        ImageAssets.notification,
+      Icon(
+        Icons.notifications,
+        size: 20,
+        color: ColorsManger.lighterGrey3,
       ),
       Positioned(
         right: 0,
@@ -24,8 +24,8 @@ class NotificationIcon extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
           ),
           constraints: BoxConstraints(
-            minWidth: 11.w,
-            minHeight: 11.h,
+            minWidth: 10.w,
+            minHeight: 10.h,
           ),
         ),
       )

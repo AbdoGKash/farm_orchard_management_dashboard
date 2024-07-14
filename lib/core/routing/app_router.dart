@@ -1,4 +1,5 @@
 import 'package:farm_orchard_management_dashboard/core/dependency_injection.dart';
+import 'package:farm_orchard_management_dashboard/features/dash_board/logic/cubit/orchards_cubit.dart';
 import 'package:farm_orchard_management_dashboard/features/dash_board/view/dash_board.dart';
 import 'package:farm_orchard_management_dashboard/features/login/logic/cubit/login_cubit.dart';
 import 'package:farm_orchard_management_dashboard/features/login/view/login.dart';
@@ -19,7 +20,10 @@ class AppRouter {
         );
       case RoutersName.dashBoard:
         return MaterialPageRoute(
-          builder: (_) => const DashBoard(),
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<OrchardsCubit>()..emitOrchardsState(),
+            child: const DashBoard(),
+          ),
         );
       default:
         return MaterialPageRoute(

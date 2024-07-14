@@ -8,4 +8,5 @@ class ImageAssets {
   static const String alert = "assets/images/alert.png";
   static const String size = "assets/images/size.png";
   static const String rectangle = "assets/images/Rectangle 564.png";
+  static const String lemon = "assets/images/lemon.png";
 }

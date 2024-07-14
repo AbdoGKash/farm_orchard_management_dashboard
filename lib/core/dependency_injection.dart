@@ -2,6 +2,8 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:dio/io.dart';
+import 'package:farm_orchard_management_dashboard/features/dash_board/data/repo/orchards_repo.dart';
+import 'package:farm_orchard_management_dashboard/features/dash_board/logic/cubit/orchards_cubit.dart';
 import 'package:get_it/get_it.dart';
 
 import '../features/login/data/repo/login_repo.dart';
@@ -15,6 +17,8 @@ Future<void> initGetIt() async {
       .registerLazySingleton<ApiService>(() => ApiService(createAndSetupDio()));
   getIt.registerLazySingleton<LoginRepo>(() => LoginRepo(getIt()));
   getIt.registerFactory<LoginCubit>(() => LoginCubit(getIt()));
+  getIt.registerLazySingleton<OrchardsRepo>(() => OrchardsRepo(getIt()));
+  getIt.registerFactory<OrchardsCubit>(() => OrchardsCubit(getIt()));
 }
 
 Dio createAndSetupDio() {
@@ -25,7 +29,6 @@ Dio createAndSetupDio() {
 
   dio.interceptors.add(InterceptorsWrapper(
     onRequest: (RequestOptions options, RequestInterceptorHandler handler) {
-      // ثق بالشهادات ذاتية الإصدار هنا
       HttpClient client = HttpClient()
         ..badCertificateCallback =
             (X509Certificate cert, String host, int port) => true;

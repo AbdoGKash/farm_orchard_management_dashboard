@@ -5,13 +5,11 @@ sealed class OrchardsState {}
 
 final class OrchardsInitial extends OrchardsState {}
 
-class LoadingState extends OrchardsState {}
+class LoadingOrchardsState extends OrchardsState {}
 
-class SuccessState extends OrchardsState {
+class SuccessOrchardsState extends OrchardsState {
   final OrchardsResponseBody orchardsResponseBody;
-  SuccessState(this.orchardsResponseBody);
+  SuccessOrchardsState(this.orchardsResponseBody);
 }
 
-class ErrorState extends OrchardsState {
-  ErrorState();
-}
+// class ErrorOrchardsState extends OrchardsState {}

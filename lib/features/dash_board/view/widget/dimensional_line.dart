@@ -1,3 +1,4 @@
+import 'package:farm_orchard_management_dashboard/core/theming/color_manger.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -10,12 +11,12 @@ class ColoredLinePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     Paint backgroundPaint = Paint()
-      ..color = Colors.white
+      ..color = ColorsManger.white
       ..strokeWidth = thickness
       ..strokeCap = StrokeCap.round;
 
     Paint progressPaint = Paint()
-      ..color = Colors.blue
+      ..color = ColorsManger.darkOrange
       ..strokeWidth = thickness
       ..strokeCap = StrokeCap.round;
 
@@ -60,7 +61,7 @@ class DimensionalLine extends StatelessWidget {
       height: 1,
       child: ColoredLine(
         progress: 0.5,
-        thickness: 5.h,
+        thickness: 11.h,
       ),
     );
   }

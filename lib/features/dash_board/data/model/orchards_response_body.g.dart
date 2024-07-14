@@ -9,18 +9,29 @@ part of 'orchards_response_body.dart';
 OrchardsResponseBody _$OrchardsResponseBodyFromJson(
         Map<String, dynamic> json) =>
     OrchardsResponseBody(
-      id: json['id'] as String?,
-      userId: json['user_id'] as String?,
-      orchardName: json['orchard_name'] as String?,
-      cropType: json['crop_type'] as String?,
-      area: json['area'] as String?,
-      waterLevel: json['water_level'] as String?,
-      pestStatus: json['pest_status'] as String?,
-      productImage: json['product_image'] as String?,
+      orchards: (json['orchards'] as List<dynamic>?)
+          ?.map((e) => OrchardsDetils.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$OrchardsResponseBodyToJson(
         OrchardsResponseBody instance) =>
+    <String, dynamic>{
+      'orchards': instance.orchards,
+    };
+
+OrchardsDetils _$OrchardsDetilsFromJson(Map<String, dynamic> json) =>
+    OrchardsDetils(
+      id: (json['id'] as num?)?.toInt(),
+      userId: (json['user_id'] as num?)?.toInt(),
+      orchardName: json['orchard_name'] as String?,
+      cropType: json['crop_type'] as String?,
+      area: (json['area'] as num?)?.toInt(),
+      waterLevel: (json['water_level'] as num?)?.toInt(),
+      pestStatus: json['pest_status'] as String?,
+    );
+
+Map<String, dynamic> _$OrchardsDetilsToJson(OrchardsDetils instance) =>
     <String, dynamic>{
       'id': instance.id,
       'user_id': instance.userId,
@@ -29,5 +40,4 @@ Map<String, dynamic> _$OrchardsResponseBodyToJson(
       'area': instance.area,
       'water_level': instance.waterLevel,
       'pest_status': instance.pestStatus,
-      'product_image': instance.productImage,
     };

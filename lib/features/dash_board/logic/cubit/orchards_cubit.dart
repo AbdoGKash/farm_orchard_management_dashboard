@@ -9,10 +9,10 @@ part 'orchards_state.dart';
 class OrchardsCubit extends Cubit<OrchardsState> {
   final OrchardsRepo orchardsRepo;
   OrchardsCubit(this.orchardsRepo) : super(OrchardsInitial());
-  void emitOrchardsState(BuildContext context) async {
-    emit(LoadingState());
+  void emitOrchardsState() async {
+    emit(LoadingOrchardsState());
     final response =
         await orchardsRepo.dashBoard(OrchardsRequestBody(userId: '1'));
-    emit(SuccessState(response));
+    emit(SuccessOrchardsState(response));
   }
 }

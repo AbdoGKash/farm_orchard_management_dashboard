@@ -14,6 +14,6 @@ abstract class ApiService {
 
   @POST(ApiConstants.login)
   Future<LoginResponseBody> login(@Body() LoginRequestBody loginRequestBody);
-  @POST(ApiConstants.login)
+  @POST(ApiConstants.dashBoard)
   Future<OrchardsResponseBody> dashBoard(@Body() OrchardsRequestBody userId);
 }

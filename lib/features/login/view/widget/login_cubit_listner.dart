@@ -37,21 +37,21 @@ class LoginCubitListner extends StatelessWidget {
           showDialog(
             context: context,
             builder: (context) => AlertDialog(
-              icon: const Icon(
+              icon: Icon(
                 Icons.error,
-                color: Colors.red,
+                color: ColorsManger.red,
                 size: 32,
               ),
-              content: Text(
-                'Error',
+              content: const Text(
+                AppStrings.error,
               ),
               actions: [
                 TextButton(
                   onPressed: () {
                     Navigator.pop(context);
                   },
-                  child: Text(
-                    'OK',
+                  child: const Text(
+                    AppStrings.ok,
                   ),
                 ),
               ],

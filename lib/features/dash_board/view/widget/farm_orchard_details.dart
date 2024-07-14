@@ -1,3 +1,4 @@
+import 'package:farm_orchard_management_dashboard/core/helper/app_strings.dart';
 import 'package:farm_orchard_management_dashboard/core/helper/image_assets_manger.dart';
 import 'package:farm_orchard_management_dashboard/core/theming/text_styel_manger.dart';
 import 'package:flutter/material.dart';
@@ -8,14 +9,26 @@ import '../../../../core/theming/color_manger.dart';
 import 'dimensional_line.dart';
 
 class FarmOrchardDetails extends StatelessWidget {
-  const FarmOrchardDetails({super.key});
+  final String orchardNamber;
+  final String waterLevel;
+  final String area;
+  final String cropType;
+  final String orchardsImages;
+
+  const FarmOrchardDetails(
+      {super.key,
+      required this.orchardNamber,
+      required this.waterLevel,
+      required this.area,
+      required this.cropType,
+      required this.orchardsImages});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(25, 25, 25, 0),
+      padding: const EdgeInsets.fromLTRB(30, 0, 30, 0).w,
       child: SizedBox(
-        width: 615.w,
+        width: 660.w,
         height: 400.h,
         child: Column(
           children: [
@@ -23,10 +36,10 @@ class FarmOrchardDetails extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'ORCHARD 1',
+                  orchardNamber,
                   style: TextStyelManger.font50WhiteRegular,
                 ),
-                Text('Oranges', style: TextStyelManger.font50WhiteRegular),
+                Text(cropType, style: TextStyelManger.font50WhiteRegular),
               ],
             ),
             SizedBox(
@@ -37,12 +50,12 @@ class FarmOrchardDetails extends StatelessWidget {
                 Column(
                   children: [
                     Text(
-                      '500',
+                      area,
                       style: TextStyelManger.font50WhiteRegular,
                     ),
                     Text(
-                      'Feddans',
-                      style: TextStyelManger.font25WhiteRegular,
+                      AppStrings.feddans,
+                      style: TextStyelManger.font20WhiteRegular,
                     ),
                   ],
                 ),
@@ -50,14 +63,14 @@ class FarmOrchardDetails extends StatelessWidget {
                   width: 170.w,
                 ),
                 SizedBox(
-                  width: 140,
-                  height: 140,
+                  width: 260.w,
+                  height: 260.h,
                   child: Stack(
                     alignment: Alignment.center,
                     children: <Widget>[
                       Image.asset(
-                        ImageAssets.oranges,
-                        width: 100.w,
+                        orchardsImages,
+                        width: 105.w,
                       ),
                       SfRadialGauge(
                         axes: <RadialAxis>[
@@ -66,17 +79,17 @@ class FarmOrchardDetails extends StatelessWidget {
                             maximum: 100,
                             showLabels: false,
                             showTicks: false,
-                            axisLineStyle: const AxisLineStyle(
+                            axisLineStyle: AxisLineStyle(
                               thickness: 0.2,
                               cornerStyle: CornerStyle.bothCurve,
-                              color: Colors.white,
+                              color: ColorsManger.white,
                               thicknessUnit: GaugeSizeUnit.factor,
                             ),
-                            pointers: const <GaugePointer>[
+                            pointers: <GaugePointer>[
                               RangePointer(
-                                value: 80,
+                                value: 70,
                                 width: 0.2,
-                                color: Colors.blue,
+                                color: ColorsManger.green,
                                 sizeUnit: GaugeSizeUnit.factor,
                               ),
                             ],
@@ -88,10 +101,11 @@ class FarmOrchardDetails extends StatelessWidget {
                 )
               ],
             ),
-            const Divider(
+            Divider(
               endIndent: 30,
               indent: 30,
-              height: 1,
+              height: 1.h,
+              color: ColorsManger.darkGrey2,
             ),
             Row(
               children: [
@@ -105,10 +119,10 @@ class FarmOrchardDetails extends StatelessWidget {
                       children: [
                         Image.asset(
                           ImageAssets.size,
-                          width: 50.w,
+                          width: 45.w,
                         ),
                         Text(
-                          '20 mm',
+                          '$waterLevel mm',
                           style: TextStyelManger.font30WhiteRegular,
                         )
                       ],
@@ -120,11 +134,11 @@ class FarmOrchardDetails extends StatelessWidget {
                   ],
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(right: 20, left: 20),
+                  padding: const EdgeInsets.only(right: 20, left: 70).w,
                   child: Container(
                     width: 1.w,
                     height: 75.h,
-                    color: ColorsManger.lighterGrey4,
+                    color: ColorsManger.darkGrey2,
                   ),
                 ),
                 Image.asset(
@@ -135,7 +149,7 @@ class FarmOrchardDetails extends StatelessWidget {
                   width: 20.w,
                 ),
                 Text(
-                  "Pest Status",
+                  AppStrings.pestStatus,
                   style: TextStyelManger.font30WhiteRegular,
                 )
               ],
