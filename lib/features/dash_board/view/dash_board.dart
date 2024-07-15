@@ -17,7 +17,7 @@ class DashBoard extends StatelessWidget {
               color: ColorsManger.white,
               width: MediaQuery.sizeOf(context).width,
               height: 70.h,
-              child: const CustomBarDashBoard()),
+              child: CustomBarDashBoard()),
           Container(
             width: MediaQuery.sizeOf(context).width,
             height: 1010.h,

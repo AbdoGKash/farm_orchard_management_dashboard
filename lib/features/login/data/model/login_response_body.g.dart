@@ -11,11 +11,13 @@ LoginResponseBody _$LoginResponseBodyFromJson(Map<String, dynamic> json) =>
       success: json['success'] as bool?,
       message: json['message'] as String?,
       permissions: json['permissions'] as String?,
+      username: json['username'] as String?,
     );
 
 Map<String, dynamic> _$LoginResponseBodyToJson(LoginResponseBody instance) =>
     <String, dynamic>{
       'success': instance.success,
       'message': instance.message,
+      'username': instance.username,
       'permissions': instance.permissions,
     };

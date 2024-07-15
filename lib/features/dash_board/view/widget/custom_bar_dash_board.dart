@@ -41,9 +41,9 @@ class CustomBarDashBoard extends StatelessWidget {
               ),
             ),
             DropdownButton<String>(
-                value: 'Abdo Gamal',
+                value: "Abdo Gamal",
                 underline: Container(),
-                items: ['Abdo Gamal'].map((String items) {
+                items: ["Abdo Gamal"].map((String items) {
                   return DropdownMenuItem<String>(
                     value: items,
                     child: Text(
