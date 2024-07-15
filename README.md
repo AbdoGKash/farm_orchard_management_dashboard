@@ -4,7 +4,7 @@ This project is a comprehensive solution for managing and monitoring the operati
 
 # 🔧 Overview:
 
-* **Built with Dart & Flutter Framework & PostgreSQL & PHP**<br>
+* **Built with Dart & Flutter Framework**<br>
 * **State Management :** [Bloc](https://pub.dev/packages/bloc) | [Flutter Bloc](https://pub.dev/packages/flutter_bloc)
 * **Api Integration :** [Dio](https://pub.dev/packages/dio) | [Retrofit](https://pub.dev/packages/retrofit) | [Retrofit Generator](https://pub.dev/packages/retrofit_generator)| [pretty_dio_logger](https://pub.dev/packages/pretty_dio_logger)<br>
 * **Code Generation and Serialization :** [json_annotation](https://pub.dev/packages/json_annotation) | [json_serializable](https://pub.dev/packages/json_serializable) | [build_runner](https://pub.dev/packages/build_runner)<br>
