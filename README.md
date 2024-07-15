@@ -1,6 +1,6 @@
 # 🚀 Welcome to the farm_orchard_management_dashboard repository!
 
-Welcome to the Farm Orchard Management Dashboard repository. This project is a comprehensive solution for managing and monitoring the operations of a farm orchard. It provides a user-friendly interface for logging in, viewing orchard details, and accessing various support and notification features.
+This project is a comprehensive solution for managing and monitoring the operations of a farm orchard. It provides a user-friendly interface for logging in, viewing orchard details, and accessing various support and notification features.
 
 # 🔧 Overview:
 
